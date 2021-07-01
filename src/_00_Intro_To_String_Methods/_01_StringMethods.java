@@ -1,5 +1,6 @@
 package _00_Intro_To_String_Methods;
 
+import java.util.ArrayList;
 import java.util.Base64;
 
 /*
@@ -55,12 +56,39 @@ public class _01_StringMethods {
     // You cannot assume there are no extra spaces around the name, but you can
     // assume there is only one space between the first and last name
     public static String lineLeader(String s1, String s2, String s3) {
-        return null;
+    	String greatest =" ";
+    	String s1trim = s1.trim();
+    	String s2trim = s2.trim();
+    	String s3trim = s3.trim();
+    	String[] strSplit1 = s1trim.split(" ");
+    	String[] strSplit2 = s2trim.split(" ");
+    	String[] strSplit3 = s3trim.split(" ");
+    	
+int i = strSplit1[1].compareTo(strSplit2[1]);
+if( i <0) {
+	int u =strSplit1[1].compareTo(strSplit3[1]);
+	if(u<0) {
+		return s1trim;
+	}
+	else {
+		return s3trim;
+	}
+}
+else {
+	int u =strSplit2[1].compareTo(strSplit3[1]);
+	if(u<0) {
+		return s2trim;
+	}
+	else {
+		return s3trim;
+	}
+}	   	
     }
 
     // Return the sum of all numerical digits in the String
     public static int numeralSum(String s) {
-        return 0;
+		return 0;
+    	
     }
 
     // Return the number of times String substring appears in String s
