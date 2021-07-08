@@ -86,14 +86,43 @@ else {
     }
 
     // Return the sum of all numerical digits in the String
-    public static int numeralSum(String s) {
-		return 0;
-    	
+    public static int numeralSum(String str) {
+		  
+		  
+		        
+		      
+		        
+		        int sum=0;
+		        char non=' ';
+		        for(int i=0; i<str.length(); i++) {
+		        non=str.charAt(i);
+		        if(non>='0'&&non<='9') {
+		        	sum+=Integer.parseInt(String.valueOf(non));
+		        }
+		        }
+		        
+		        return sum;
+		  
     }
-
+    
     // Return the number of times String substring appears in String s
     public static int substringCount(String s, String substring) {
-        return 0;
+    	int times = 0;
+    	int index=0;
+    	String shorter=s;
+    	for (int i = 0; i < s.length(); i+=substring.length()) {
+    	    if (shorter.contains(substring)) {
+    	        times += 1;
+    	        index=shorter.indexOf(substring);
+    	        index+=substring.length();
+    	      
+    	        shorter=shorter.substring(index);
+    	   
+    	    }
+    	}
+		return times;
+    	 
+    
     }
 
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
