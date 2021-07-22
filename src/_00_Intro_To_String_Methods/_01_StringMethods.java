@@ -127,19 +127,24 @@ else {
 
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
     public static String encrypt(String s, char key) {
-        return null;
+    
+    	
+    	String ans= Utilities.encrypt(s.getBytes(),(byte) key);
+        return ans;
     }
 
     // Call Utilities.decrypt at the bottom of this file to decrypt the
     // cyphertext (encrypted text)
     public static String decrypt(String s, char key) {
-        return null;
+    	
+        return  Utilities.decrypt(s,(byte) key);
     }
 
     // Return the number of words in String s that end with String substring
     // You can assume there are no punctuation marks between words
     public static int wordsEndsWithSubstring(String s, String substring) {
-        return 0;
+    	
+    	return 0;
     }
 
     // Given String s, return the number of characters between the first
@@ -174,4 +179,5 @@ class Utilities {
         }
         return new String(b);
     }
+    
 }
